@@ -11,6 +11,7 @@ const Home = ({features,firstProductsData,secondProductsData}) => {
 
   return (
     <>
+          
           <HeroSection />
           <FeatureSection features={features} />
           <ProductSection products={firstProductsData} title='Featured products'/>

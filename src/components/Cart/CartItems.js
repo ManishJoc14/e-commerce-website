@@ -1,5 +1,3 @@
-// CartItems.js
-
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteProduct, updateQuantityOfProduct } from './cartFeatures';
@@ -44,6 +42,7 @@ const CartItems = ({ updateTotal }) => {
 
   const handleDelete = (src) => {
     dispatch(deleteProduct({ src }));
+    alert("Item removed from cart");
   }
 
   const handleQuantityChange = (imageSrc, newQuantity) => {
