@@ -1,9 +1,9 @@
 import React from "react";
 import ProductSection from "../Home/products_Section/ProductSection";
 import Pagination from './../Blog/Pagination';
+import Banner from "./Banner";
 
-
-const Shop = ({thirdProductsData}) => {
+const Shop = ({ProductsData}) => {
   return (
     <>
       <section id="page-header">
@@ -11,7 +11,8 @@ const Shop = ({thirdProductsData}) => {
         <p>Save more with coupns & up to 70% off!</p>
       </section>
 
-      <ProductSection products={thirdProductsData} title='Collections' />
+      <ProductSection products={ProductsData.slice(0,12)} title='Collections' />
+      <Banner/>
       <Pagination/>  
     </>
   );

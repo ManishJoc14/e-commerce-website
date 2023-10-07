@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./Cart/cartFeatures";
 
-const ProductModal = ({ modalProduct }) => {
+const ProductModal = ({ modalProduct,updateProductModal }) => {
   const dispatch = useDispatch();
+  const closeModalRef = useRef();
   const { name, price, imageSrc } = modalProduct;
   const [noOfQuantity, setNoOfQuantity] = useState(1);
     const handleAddToCart = (product) => {
       dispatch(addProduct({ name: product.name, price: product.price, quantity: noOfQuantity, imageSrc: product.imageSrc, subtotal : parseInt(product.price)* parseInt(noOfQuantity)}));
       alert("Added To Cart");
+      updateProductModal({name:'',price:'',quantity:1, imageSrc:''});
+      closeModalRef.current.click();
     };
   const handleQuantityChange = (e) => {
     setNoOfQuantity(e.target.value)
@@ -79,7 +82,7 @@ const ProductModal = ({ modalProduct }) => {
               <button
                 type="button"
                 className="btn btn-secondary"
-                data-bs-dismiss="modal"
+                data-bs-dismiss="modal" ref={closeModalRef}
               >
                 Close
               </button>

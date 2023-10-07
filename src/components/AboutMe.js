@@ -56,7 +56,7 @@ const AboutMe = () => {
                       <hr className="mt-0 mb-4" />
                       <div className="row pt-1">
                         <p className="text-muted my">
-                          This is an e-commerce website made with React.js. It
+                          This is a e-commerce website made with React.js. It
                           offers a wide range of products for online shopping.
                           Here you can add items to cart.
                           <br />

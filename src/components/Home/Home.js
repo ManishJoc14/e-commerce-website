@@ -2,22 +2,18 @@ import React from 'react'
 import HeroSection from "./HeroSection";
 import FeatureSection from "./features_Section/FeatureSection";
 import ProductSection from "./products_Section/ProductSection";
-import BannerFirst from "./BannerFirst";
-import BannerSecond from "./BannerSecond";
+import Banner from "./Banner";
 
 
 
-const Home = ({features,firstProductsData,secondProductsData}) => {
+const Home = ({features,ProductsData}) => {
 
   return (
     <>
-          
           <HeroSection />
           <FeatureSection features={features} />
-          <ProductSection products={firstProductsData} title='Featured products'/>
-          <BannerFirst/>
-          <ProductSection products={secondProductsData} title='New Arrivals' />
-          <BannerSecond/>
+          <ProductSection products={ProductsData.slice(0,12)} title='Featured products'/>
+          <Banner/>
     </>
   )
 }

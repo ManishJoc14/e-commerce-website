@@ -14,7 +14,7 @@ const ProductSection = ({products,title}) => {
   }
   return (
     <>
-        <ProductModal modalProduct={modalProduct}/>
+        <ProductModal modalProduct={modalProduct} updateProductModal={updateProductModal}/>
         <section id="product1" className="section-p1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <h2>{title}</h2>
             <p>Summer Collection New Modern Design</p>

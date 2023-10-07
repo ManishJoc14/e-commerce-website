@@ -104,7 +104,7 @@ export const secondProductsData = [
   },
 ].sort(() => Math.random() - 0.5);
 
-export const thirdProductsData = [...firstProductsData, ...secondProductsData].sort(
+export const ProductsData = [...firstProductsData, ...secondProductsData].sort(
   () => Math.random() - 0.5
 );
 

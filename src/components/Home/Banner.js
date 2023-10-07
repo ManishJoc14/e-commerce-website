@@ -1,6 +1,6 @@
 import React from "react";
 
-const BannerSecond = () => {
+const Banner = () => {
   return (
     <>
       <section id="sm-banner" className="section-p1">
@@ -40,4 +40,4 @@ const BannerSecond = () => {
   );
 };
 
-export default BannerSecond;
+export default Banner;

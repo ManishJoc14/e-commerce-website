@@ -1,4 +1,4 @@
-import { featuresData, blogData, firstProductsData, secondProductsData, thirdProductsData, contactData } from "./data/data";
+import { featuresData, blogData, ProductsData, contactData } from "./data/data";
 
 import { useState } from "react";
 import {  Routes,Route } from 'react-router-dom';
@@ -25,8 +25,8 @@ function App() {
         <Navbar />
         <LoadingBar color='#329490' progress={progress} />
             <Routes>
-                <Route path='/' element={<Home features={featuresData} firstProductsData={firstProductsData} secondProductsData={secondProductsData} />} />
-                <Route path="/shop" element={<Shop thirdProductsData={thirdProductsData} />} />
+                <Route path='/' element={<Home features={featuresData} ProductsData={ProductsData}/>} />
+                <Route path="/shop" element={<Shop ProductsData={ProductsData} />} />
                 <Route path="/about" element={<About setProgress={setProgress}/>} />
                 <Route path="/blog" element={<Blog blogData={blogData} />} />
                 <Route path="/contact" element={<Contact contactData={contactData} setProgress={setProgress}/>} />
