@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./Cart/cartFeatures";
+import {toast} from "react-toastify";
 
 const ProductModal = ({ modalProduct,updateProductModal }) => {
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const ProductModal = ({ modalProduct,updateProductModal }) => {
   const [noOfQuantity, setNoOfQuantity] = useState(1);
     const handleAddToCart = (product) => {
       dispatch(addProduct({ name: product.name, price: product.price, quantity: noOfQuantity, imageSrc: product.imageSrc, subtotal : parseInt(product.price)* parseInt(noOfQuantity)}));
-      alert("Added To Cart");
+      toast.success("Added To Cart");
       updateProductModal({name:'',price:'',quantity:1, imageSrc:''});
       closeModalRef.current.click();
     };

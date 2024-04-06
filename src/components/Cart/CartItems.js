@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteProduct, updateQuantityOfProduct } from './cartFeatures';
 import { v4 as uuidv4 } from 'uuid'
+import { toast } from 'react-toastify';
 
 const CartItems = ({ updateTotal }) => {
   const cartItems = useSelector(store => store.cartItems);
@@ -42,7 +43,7 @@ const CartItems = ({ updateTotal }) => {
 
   const handleDelete = (src) => {
     dispatch(deleteProduct({ src }));
-    alert("Item removed from cart");
+    toast.error("Item removed!!")
   }
 
   const handleQuantityChange = (imageSrc, newQuantity) => {
