@@ -30,7 +30,6 @@ function App() {
                 <Route path="/about" element={<About setProgress={setProgress}/>} />
                 <Route path="/blog" element={<Blog blogData={blogData} />} />
                 <Route path="/contact" element={<Contact contactData={contactData} setProgress={setProgress}/>} />
-                <Route path="/aboutme" element={<AboutMe />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>
         <NewsLetter/>
