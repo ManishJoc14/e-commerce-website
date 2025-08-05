@@ -50,15 +50,6 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              
-              to="/aboutme"
-              className={pathname === '/aboutme' ? "active" : ""}
-            >
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link
               id="lg-bag"
               to="/cart"
               className={pathname === '/cart' ? "active" : ""}
